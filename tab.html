@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>讨论tab实现</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		font:14px "微软雅黑","MicrosoftYaHei";
+		text-align: center;
+	}
+	.border{
+		border: 1px solid #999;
+		width: 574px;
+		background-color: #fff;
+		margin: 50px auto;
+	}
+	.group1{
+		display: none;
+	}
+	.border ul{
+		display: flex;
+	}
+	.border ul li{
+		list-style: none;
+		display: inline;
+		flex:1;
+		line-height: 30px;
+		border: solid #cecece;
+		border-width: 0 0 1px 1px;
+		background-color: #f1f1f1;
+	}
+	.border ul li:first-child{
+		border-left-width: 0;
+	}
+	.content{
+		display: none;
+		text-align: left;
+		padding: 20px;
+	}
+	#item1:checked ~ .c1,#item2:checked ~ .c2,#item3:checked ~ .c3{
+		display: block;
+	}
+	#item1:checked ~ ul .check1,#item2:checked ~ ul .check2,#item3:checked ~ ul .check3{
+		background-color: #fff;
+		border-bottom: 0;
+	}
+	</style>
+</head>
+<body>
+	<div class="border">
+		<input type="radio" class="group1" name="border" id="item1" checked="checked">
+		<input type="radio" class="group1" name="border" id="item2">
+		<input type="radio" class="group1" name="border" id="item3">
+		<ul>
+			<li class="check1"><label for="item1">课程</label></li>
+			<li class="check2"><label for="item2">学习计划</label></li>
+			<li class="check3"><label for="item3">技能图谱</label></li>
+		</ul>
+		<div class="content c1">课程内容</div>
+		<div class="content c2">学习计划内容</div>  
+		<div class="content c3">技能图谱内容</div>
+	</div>
+</body>
+</html>
